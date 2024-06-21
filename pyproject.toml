@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "tg-demo"
+version = "0.1.0"
+description = "Basic telegram bot"
+authors = ["Minin <79887423414@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
