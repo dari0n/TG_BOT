@@ -22,20 +22,20 @@ def reset_messages():
     messages.clear()
 
 
-def update(message, role, content):
+def update(messages, role, content):
     """
     Функция обновления списка сообщений
     """
-    message.append({"role": role, "content": content})
+    messages.append({"role": role, "content": content})
 
 
 @router.message(CommandStart())
-async def start(message: Message, state: FSMContext):
+async def start(messages: Message, state: FSMContext):
     """
     Функция очистки контекста и начала сообщений по команде /start
     """
     reset_messages()
-    await message.reply("Здравствуйте, чем я могу Вам помочь?")
+    await messages.reply("Здравствуйте, чем я могу Вам помочь?")
     await state.clear()
 
 
