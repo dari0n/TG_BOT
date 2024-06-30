@@ -22,11 +22,11 @@ def reset_messages():
     messages.clear()
 
 
-def update(messages, role, content):
+def update(message, role, content):
     """
     Функция обновления списка сообщений
     """
-    messages.append({"role": role, "content": content})
+    message.append({"role": role, "content": content})
 
 
 @router.message(CommandStart())
